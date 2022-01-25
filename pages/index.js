@@ -32,7 +32,7 @@ const cards = [
 ];
 
 export default function Home() {
-  const title = "Hello again everyone!";
+  const title = "Hello again code!";
 
   return (
     <div className={styles.container}>
