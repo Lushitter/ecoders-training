@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Menu from "../components/Menu";
 import Card from "../components/Card";
-import Login from "../components/Login";
+import Login from "../components/CLogin";
 
 const cards = [
   {
@@ -38,26 +38,22 @@ export default function Home() {
     <div className={styles.container}>
       <Menu />
 
-      <Login/>
+      <Login />
 
       <h1>{title}</h1>
 
-      {
-        cards.map(
-          function(cards){
-            return (
-              <Card
-              key={cards.title}
-              title={cards.title}
-              description={cards.description}
-              images={cards.image}
-              widht={cards.widht}
-              height={cards.height}
-              />
-            )
-          }
-        )
-      }
+      {cards.map(function (cards) {
+        return (
+          <Card
+            key={cards.title}
+            title={cards.title}
+            description={cards.description}
+            images={cards.image}
+            widht={cards.widht}
+            height={cards.height}
+          />
+        );
+      })}
     </div>
   );
 }
